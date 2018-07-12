@@ -1,0 +1,15 @@
+groups:
+- name: example_recording_rules
+  rules:
+  - record: ma:test:rate
+    expr: delta(test_gauge[15m])
+
+- name: example_alerting_rules
+  rules:
+  - alert: Test Gauge Alert Name
+    expr: test_gauge == 1
+    for: 1m
+    labels:
+      severity: page
+    annotations:
+      summary: Insert some summary here

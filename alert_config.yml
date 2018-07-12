@@ -1,0 +1,13 @@
+global:
+  slack_api_url: 'https://hooks.slack.com/services/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'
+
+route:
+  receiver: 'slack-notifications'
+  group_by: [tenant, machine]
+  group_interval: 10s
+  group_wait: 10s 
+
+receivers:
+- name: 'slack-notifications'
+  slack_configs:
+  - channel: '#random'
