@@ -3,7 +3,7 @@ global:
   evaluation_interval: 10s
 
 rule_files: 
-- '/Users/dtcsight/sandbox/prometheus-test/alert.rules'
+- '/Users/dtcsight/sandbox/prometheus-sandbox/alert.rules'
 
 alerting:
   alertmanagers:

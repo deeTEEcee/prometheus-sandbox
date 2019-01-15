@@ -16,4 +16,3 @@ gauge = Gauge(
 )
 
 gauge.labels(tenant='cs', machine='some_machine').set(1)
-pushadd_to_gateway('localhost:9091', job='monitor_etl', registry=REGISTRY)

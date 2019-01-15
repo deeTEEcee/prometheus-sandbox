@@ -14,5 +14,4 @@ This requires running three processes: prometheus, alertmanager, and the pushgat
 2. Run the alertmanager and run `./alertmanager --config.file="<insert_dir_here>/sandbox/prometheus-test/alert_config.yml`
 3. Run the pushgateway with docker. (see "Using Docker" in https://github.com/prometheus/pushgateway)
 4. If you have your alerts properly configured, the remaining thing to do is to insert metrics (the example in main.py has some code that should cause an alert to happen.)
-- Run `python main.py`
-- Open up localhost:9090 and click Alerts. You should see an alert firing.
+5. Run `ma prometheus_metrics -p 9091`

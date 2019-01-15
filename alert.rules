@@ -13,3 +13,13 @@ groups:
       severity: page
     annotations:
       summary: Insert some summary here
+
+- name: alert_1
+  rules:
+  - alert: Alert 1
+    expr: ma_etl_status_updatetime > 0
+    for: 1m
+    labels:
+      severity: page
+    annotations:
+      summary: Insert some summary here
