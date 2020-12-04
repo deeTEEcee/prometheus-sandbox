@@ -1,7 +1,7 @@
-# A way for beginners to test prometheus (using pushgateway). 
+# A way for beginners to test prometheus.
 
 ### Installing on OS X
-0. Install prometheus_client on your python environmen.t 
+0. Install prometheus_client on your python environment. 
 1. Install Prometheus: `brew install prometheus`
 2. Download the darwin directory for alertmanager
 3. Configure slack to the correct url. 
@@ -13,8 +13,9 @@ This requires running three processes: prometheus, alertmanager, and the pushgat
 1. cd into this directory and run "prometheus"
 2. Run the alertmanager and run `./alertmanager --config.file="<insert_dir_here>/sandbox/prometheus-test/alert_config.yml`
 3. Run the pushgateway with docker. (see "Using Docker" in https://github.com/prometheus/pushgateway)
-4. If you have your alerts properly configured, the remaining thing to do is to insert metrics (the example in main.py has some code that should cause an alert to happen.)
-5. Run `ma prometheus_metrics -p 9091`
+4. If you have your alerts properly configured, the remaining thing to do is to insert metrics
+    a. The example in main.py has some code that should cause an alert to happen.
+    b. You could also add a custom exporter with ports that are already configured in `static_configs.targets`
 
 ### Quick Prometheus Startup Advice ###
 I would not recommend using pushgateway because imo, it just adds an extra layer to the service. If you can, just use existing exporters or create your own custom exporters. For a prometheus beginner, what does that mean exactly? Well, you normally have the following:
