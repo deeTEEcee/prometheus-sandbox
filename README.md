@@ -1,4 +1,8 @@
-# A sandbox to help beginners test prometheus and understand how it works
+# A prometheus sandbox environment 
+This is a quick sandbox test that includes all the basic parts of the prometheus toolbox (prometheus, alertmanager, etc.) including configuration with instructions on how to run them. 
+
+If you are new to prometheus, try taking a look at this [guide](https://github.com/deeTEEcee/prometheus-beginners-guide) first.  
+
 
 
 ### Installing on OS X
