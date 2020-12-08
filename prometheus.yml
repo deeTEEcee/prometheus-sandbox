@@ -3,7 +3,7 @@ global:
   evaluation_interval: 10s
 
 rule_files: 
-- '/Users/dtcsight/sandbox/prometheus-sandbox/alert.rules'
+- '<full path>/alert_config.rules'
 
 alerting:
   alertmanagers:
@@ -20,4 +20,4 @@ scrape_configs:
     # Override the global default and scrape targets from this job every 5 seconds.
 
     static_configs:
-      - targets: ['localhost:9090', 'localhost:9091']
+      - targets: ['localhost:8000']

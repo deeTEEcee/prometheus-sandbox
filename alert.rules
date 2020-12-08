@@ -1,23 +1,13 @@
 groups:
 - name: example_recording_rules
   rules:
-  - record: ma:test:rate
-    expr: delta(test_gauge[15m])
+  - record: timestamp:test:rate
+    expr: delta(timestamp[15m])
 
 - name: example_alerting_rules
   rules:
-  - alert: Test Gauge Alert Name
-    expr: test_gauge == 1
-    for: 1m
-    labels:
-      severity: page
-    annotations:
-      summary: Insert some summary here
-
-- name: alert_1
-  rules:
-  - alert: Alert 1
-    expr: ma_etl_status_updatetime > 0
+  - alert: Test Counter Alert
+    expr: sample_counter_int > 3
     for: 1m
     labels:
       severity: page
